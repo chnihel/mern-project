@@ -7,7 +7,12 @@ const port = 3000;
 const app = express();
 const cors = require("cors");
 
-app.use(cors());
+app.use(cors({
+  origin:'https://mern-project-front-xi.vercel.app/',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
+}));
 app.use(express.json()); // Middleware to parse JSON bodies
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded data
 
