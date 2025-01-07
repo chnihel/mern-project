@@ -64,7 +64,7 @@ module.exports = {
       await newUser.save();
 
       //send verification email
-      const verificationLink = `${process.env.FRONTEND_URL}/user/verify-email/${verificationCode}`;
+      const verificationLink = `/user/verify-email/${verificationCode}`;
       const mailOptions = {
         from: '"MyApp" <c4f74bf0e8bf1b@sandbox.mailtrap.io>',
         to: newUser.email,
@@ -187,7 +187,7 @@ module.exports = {
       );
 
       // Create the reset link (frontend URL for password reset page)
-      const resetLink = `${process.env.FRONTEND_URL}/reset-password/${resetToken}`;
+      const resetLink = `/reset-password/${resetToken}`;
 
       // Define the email options (to be sent to the user)
       const mailOptions = {
