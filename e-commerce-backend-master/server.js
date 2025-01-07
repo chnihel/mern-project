@@ -8,7 +8,7 @@ const app = express();
 const cors = require("cors");
 
 app.use(cors({
-  origin:'https://mern-project-front-xi.vercel.app/',
+  origin:'https://mern-project-front-xi.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
