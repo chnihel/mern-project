@@ -36,16 +36,16 @@ app.use("/verification", express.static(path.join(__dirname, "verification")));
 app.use("/storage", express.static(path.join(__dirname, "storage")));
 
 // Set up routes
-app.use("/categories", categoryRoute); // Route for categories
-app.use("/subCategories", subCategoryRoute); // Route for subcategories
-app.use("/product", productRoute);
-app.use("/user", userRoute);
-app.use("/admin", adminRoute);
-app.use("/provider", providerRoute);
-app.use("/customer", customerRoute);
-app.use("/commande", commandeRoute);
-app.use("/facture", factureRoute);
-app.use("/order", orderRoute);
+app.use("/api/categories", categoryRoute); // Route for categories
+app.use("/api/subCategories", subCategoryRoute); // Route for subcategories
+app.use("/api/product", productRoute);
+app.use("/api/user", userRoute);
+app.use("/api/admin", adminRoute);
+app.use("/api/provider", providerRoute);
+app.use("/api/customer", customerRoute);
+app.use("/api/commande", commandeRoute);
+app.use("/api/facture", factureRoute);
+app.use("/api/order", orderRoute);
 
 /* app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
