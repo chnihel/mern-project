@@ -4,7 +4,7 @@ const Login = (data) => {
   return axios.post("/user/login", data);
 };
 const Register = (data) => {
-  return axios.post("/admin", data);
+  return axios.post("/admin/", data);
 };
 
 // Password reset request
