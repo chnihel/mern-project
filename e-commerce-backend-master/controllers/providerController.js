@@ -35,8 +35,8 @@ module.exports = {
         to: provider.email,
         subject: "email verification code",
         text: `Click here to get your code: ${code}`,
-        html: `<b> click here to get your code </b> <a href=http://localhost:3000/user/verify-email/${code}>get your code</a>`,
-      };
+/*         html: `<b> click here to get your code </b> <a href=http://localhost:3000/user/verify-email/${code}>get your code</a>`,
+ */      };
       await transporter.sendMail(mailOptions);
       res.status(200).json({
         success: true,
